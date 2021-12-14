@@ -18,27 +18,4 @@ public class Myapi {
 }
 
 
-      //  call.enqueue(new Callback<data>() {
-            //@Override
-//            public void onResponse(Call<data> call, Response<data> response) {
-//                res=response;
-////               try{
-////                   data d= response.body();
-////                   Exclusion[][] ex=d.getExclusions();
-////                   int v=ex[1][1].getOptions_id();
-////                   Exclusion[] m=ex[0];
-////
-////                   res.setText("success "+m[2].getOptions_id());
-//            }
-//
-//            // res.setText(ex[0][1].getOptions_id());
-//
-//
-//            @Override
-//            public void onFailure(Call<data> call, Throwable t) {
-//
-//            }
-//        });
-       // return res;
-
 

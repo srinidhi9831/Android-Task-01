@@ -11,9 +11,5 @@ public class Exclusion {
     public int getOptions_id() {
         return options_id;
     }
-//    private ExclusionList[] exclusionLists;
-//
-//    public ExclusionList[] getExclusionLists() {
-//        return exclusionLists;
-//    }
+
 }

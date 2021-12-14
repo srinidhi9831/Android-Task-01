@@ -33,68 +33,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //res=(TextView) findViewById(R.id.result);
-
-//        ListView mylistview=findViewById(R.id.lsView);
-//        ArrayList<String> groc=new ArrayList<String>();
-//
-//        groc.add("inchara");
-//        groc.add("prathik");
-//        groc.add("prajwal");
-//        groc.remove("inchara");
-
-//
-//        ArrayAdapter<String>arrayAdapter=new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,groc);
-//        mylistview.setAdapter(arrayAdapter);
-
-//        Retrofit retrofit=new Retrofit.Builder()
-//                .baseUrl("https://my-json-server.typicode.com/")
-//                .addConverterFactory(GsonConverterFactory.create())
-//                .build();
-//
-//        jsonplaceholder jsonplh=retrofit.create(jsonplaceholder.class);
-//        Call<data> call=jsonplh.getData();
-//        call.enqueue(new Callback<data>() {
-//            @Override
-//            public void onResponse(Call<data> call, Response<data> response) {
-//               try{
-//                   data d= response.body();
-//                   Exclusion[][] ex=d.getExclusions();
-//                   int v=ex[1][1].getOptions_id();
-//                   Exclusion[] m=ex[0];
-//
-//                   res.setText("success "+m[2].getOptions_id());
-//               }
-//               catch (Exception exception){
-//                   res.setText(exception.getMessage());
-//               }
-//                   // res.setText(ex[0][1].getOptions_id());
-//            }
-//
-//            @Override
-//            public void onFailure(Call<data> call, Throwable t) {
-//                    res.setText(t.getMessage());
-//            }
-//        });
-        //Call<List<data>> call= jsonplh.getData();
-       // res.setText(call.toString());
-//        call.enqueue(new Callback<List<data>>() {
-//            @Override
-//            public void onResponse(Call<List<data>> call, Response<List<data>> response) {
-//               List<data> d=response.body();
-//              // String[] f=
-//               res.append(d.toString());
-//
-//
-//            }
-//
-//            @Override
-//            public void onFailure(Call<List<data>> call, Throwable t) {
-//                 //res.setText("once again error:"+t.getMessage());
-//                res.append(t.getMessage());
-//            }
-//        });
-        //recycler view
         RecyclerView name=(RecyclerView) findViewById(R.id.rcView);
         name.setLayoutManager(new LinearLayoutManager(this));
 
@@ -106,7 +44,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<data> call, Response<data> response) {
                 name.setAdapter(new Myadapter(response.body(),MainActivity.this));
-              //name2.setAdapter(new ItemsAdapter(response.body().getFacilities()));
 
             }
 
@@ -115,29 +52,21 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-      // ch=(CheckBox) findViewById(R.id.itCheckBox);
-        //dispMessage(ch.getText().toString());
-       // Toast.makeText(this,name, Toast.LENGTH_SHORT).show();
-//     name.setOnClickListener(new View.OnClickListener() {
-//         @Override
-//         public void onClick(View view) {
-//             Toast.makeText(MainActivity.this,"hola", Toast.LENGTH_SHORT).show();
-//             //dispMessage("hola");
-//         }
-//     });
-
-
-
-       // RecyclerView name=(RecyclerView) findViewById(R.id.rcView);
-        //name.setLayoutManager(new LinearLayoutManager(this));
-        //String[] arr={"helo","hola","bala"};
-
 
     }
-    public void dispMessage(String message){
-        Toast.makeText(getApplicationContext(),message, Toast.LENGTH_SHORT).show();
-    }
-    void validate(){
+//    public void addExclusions(View view,Exclusion[][] exclusions){
+//
+//        for(Exclusion[] ex:exclusions){
+//                 int op01=ex[0].getOptions_id();
+//                 int op02=ex[1].getOptions_id();
+//                 if(view.findViewById(op01).isPressed()){
+//                     view.findViewById(op02).setEnabled(false);
+//
+//            }
+//                 else if(view.findViewById(op02).isPressed()){
+//                     view.findViewById(op01).setEnabled(false);
+//                 }
+//        }
+//    }
 
-    }
 }

@@ -3,7 +3,7 @@ package com.example.listview;
 public class foptions {
    private String name;
    private String icon;
-   private String id;
+   private int id;
 
     public String getName() {
         return name;
@@ -13,7 +13,7 @@ public class foptions {
         return icon;
     }
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 }
