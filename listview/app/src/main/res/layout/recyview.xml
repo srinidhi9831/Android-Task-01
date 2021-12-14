@@ -5,9 +5,9 @@
     android:id="@+id/myLayout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="8px"
+    android:layout_margin="2dp"
     android:orientation="vertical"
-    android:padding="10px">
+    android:padding="18dp">
 
     <TextView
         android:id="@+id/Heading"

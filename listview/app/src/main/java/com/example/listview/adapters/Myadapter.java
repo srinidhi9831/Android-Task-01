@@ -51,12 +51,18 @@ public class Myadapter extends RecyclerView.Adapter<Myadapter.Myviewholder> {
          RadioGroup rg=holder.radioGroup;
                  rg.setId(facilities[position].getFacility_id()+100);
 
+
     for(foptions op:options){
         RadioButton r=new RadioButton(holder.itemView.getContext());
+        TextView tv01=new TextView(holder.itemView.getContext());
+        TextView tv02=new TextView(holder.itemView.getContext());
+        tv02.setText("Icon:"+op.getIcon());
+        tv01.setText("ID :"+op.getId());
         r.setText(op.getName());
         r.setId(op.getId());
         holder.radioGroup.addView(r);
-
+        holder.radioGroup.addView(tv01);
+        holder.radioGroup.addView(tv02);
     }
 
     }
