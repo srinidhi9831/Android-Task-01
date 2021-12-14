@@ -1,0 +1,19 @@
+package com.example.listview;
+
+public class Exclusion {
+    private int facility_id;
+    private int options_id;
+
+    public int getFacility_id() {
+        return facility_id;
+    }
+
+    public int getOptions_id() {
+        return options_id;
+    }
+//    private ExclusionList[] exclusionLists;
+//
+//    public ExclusionList[] getExclusionLists() {
+//        return exclusionLists;
+//    }
+}
