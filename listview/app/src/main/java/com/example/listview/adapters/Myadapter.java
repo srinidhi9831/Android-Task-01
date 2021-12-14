@@ -1,21 +1,21 @@
-package com.example.listview;
-import android.annotation.SuppressLint;
+package com.example.listview.adapters;
 import android.app.Activity;
-import android.graphics.Color;
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.CheckBox;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.listview.MainActivity;
+import com.example.listview.R;
+import com.example.listview.model.Exclusion;
+import com.example.listview.model.Facilities;
+import com.example.listview.model.data;
+import com.example.listview.model.foptions;
 
 
 public class Myadapter extends RecyclerView.Adapter<Myadapter.Myviewholder> {
@@ -24,7 +24,7 @@ public class Myadapter extends RecyclerView.Adapter<Myadapter.Myviewholder> {
     Exclusion[][] exclusions;
     Activity activity;
     MainActivity mainActivity;
-    Myadapter(data d,Activity activity){
+    public Myadapter(data d, Activity activity){
         this.activity=activity;
         this.d=d;
         this.facilities=d.getFacilities();
@@ -49,7 +49,7 @@ public class Myadapter extends RecyclerView.Adapter<Myadapter.Myviewholder> {
     foptions[] options=  facilities[position].getOptions();
 
          RadioGroup rg=holder.radioGroup;
-                 rg.setId(facilities[position].getFacility_id());
+                 rg.setId(facilities[position].getFacility_id()+100);
 
     for(foptions op:options){
         RadioButton r=new RadioButton(holder.itemView.getContext());
@@ -85,22 +85,12 @@ public class Myadapter extends RecyclerView.Adapter<Myadapter.Myviewholder> {
                  int options_id_02=ex[1].getOptions_id();
 
                  if(((RadioButton)activity.findViewById(options_id_01)).isChecked()){
-                     String x="inside exclusion opID="+options_id_02;
-                     Toast.makeText(itemView.getContext(),x,Toast.LENGTH_SHORT).show();
-                     ((RadioButton)activity.findViewById(options_id_02)).setEnabled(false);
+
+                     activity.findViewById(options_id_02).setEnabled(false);
                  }
                  else{
                      activity.findViewById(options_id_02).setEnabled(true);
                  }
-//                    if(radioGroup.getId()==facility_id_01 && i==options_id_01){
-//
-//                       activity.findViewById(options_id_02).setEnabled(false);
-//                       break;
-//
-//                    }
-//                    else{
-//                        activity.findViewById(options_id_02).setEnabled(true);
-//                    }
                }
 
              }

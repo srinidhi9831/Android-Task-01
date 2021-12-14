@@ -1,4 +1,4 @@
-package com.example.listview;
+package com.example.listview.model;
 
 public class Facilities {
     private int facility_id;

@@ -1,4 +1,7 @@
-package com.example.listview;
+package com.example.listview.RetrofitApi;
+import com.example.listview.jsonplaceholder;
+import com.example.listview.model.data;
+
 import retrofit2.Call;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;

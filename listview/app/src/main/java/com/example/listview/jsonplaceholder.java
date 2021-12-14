@@ -1,6 +1,6 @@
 package com.example.listview;
 
-import java.util.List;
+import com.example.listview.model.data;
 
 import retrofit2.Call;
 import retrofit2.http.GET;
